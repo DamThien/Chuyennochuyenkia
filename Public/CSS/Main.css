@@ -1,0 +1,16 @@
+.nav {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logo-blox {
+    height: 10rem;
+    width: 10rem;
+}
+
+.logo-blox>img {
+    width: 100%;
+    height: 100%;
+
+}
