@@ -1,7 +1,7 @@
 <?php
 
 require_once 'D:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php';
-
+use Models\classDatabase\Database;
 
 class category
 {
@@ -18,23 +18,15 @@ class category
         $result = $this ->db->insert($query);
         return $result;
     }
-}
 
 
-class showCategory 
-{   
-    private $dbcategory;
+    public function showCategory(){
+            $query = "SELECT * FROM categories ORDER BY id_category ASC";
+            $result = $this -> db ->select($query);
+            return $result;
 
-    public function __construct(){
-        $this->dbcategory = new Database();
-    }
-
-    public function query_category()
-    {
-        $sql = "SELECT * FROM categories";
-        $result = $this->dbcategory->select($sql);
-        return $result;
     }
 }
+
 
 ?>

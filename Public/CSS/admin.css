@@ -25,7 +25,7 @@ body.login {
   height: auto;
 }
 
-/* header */
+/* -------------header -------------*/
 header[role="banner"] {
   background: white;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
@@ -54,7 +54,7 @@ header[role="banner"] .utilities li a {
   display: block;
 }
 
-/* header */
+/* -----------------------header------------------------ */
 .utilities a:before {
   content: "\f248";
   font-family: FontAwesome;
@@ -69,7 +69,7 @@ header[role="banner"] .utilities li a {
   content: "";
 }
 
-/* navigation menu  */
+/* -----------------navigation menu---------------------  */
 
 nav[role="navigation"] {
   background: #2a3542;
@@ -133,7 +133,7 @@ li:hover ul.posts_menu-item {
   background-color: #000000;
 }
 
-/* panels */
+/* ------------------panels------------------------- */
 .panel .admin_content-post .admin_content-category {
   background-color: white;
   color: darkslategray;
@@ -147,8 +147,19 @@ li:hover ul.posts_menu-item {
 .panel > ul {
   margin: 1rem;
 }
+/*-----------category list-------------------*/
+.category_list table {
+  width: 50%;
+  text-align: center;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+.category_list table tr th,td {
+  border: 1px solid #000000;
+  
+}
 
-/* typography */
+/* -----------------typography------------------ */
 a {
   text-decoration: none;
   color: inherit;
@@ -173,7 +184,7 @@ b {
   color: lightslategray;
 }
 
-/* lists */
+/* -----------------------lists------------------- */
 ul,
 li {
   list-style-type: none;
@@ -190,7 +201,7 @@ label {
   margin: 0.4rem 0;
 }
 
-/* responsive */
+/* -----------------responsive---------------------------*/
 @media screen and (min-width: 600px) {
   html,
   body {
@@ -269,6 +280,7 @@ label {
     margin-left: 200px;
   }
 }
+
 @media screen and (min-width: 900px) {
   footer[role="contentinfo"] {
     position: fixed;

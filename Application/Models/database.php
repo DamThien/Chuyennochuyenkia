@@ -1,7 +1,10 @@
+<?php 
 
-<?php include 'config.php' ?>
+namespace Models\classDatabase;
 
-<?php
+include_once 'config.php';
+use mysqli;
+
 class Database
 {
     public $host = DB_HOST;
@@ -25,19 +28,18 @@ class Database
             $this->error = "Connection failed: " . $this->link->connect_error;
             return false;
         }
-       
     }
 
     //select or read data
-        public function select($query)
-        {
-            $result = $this->link->query($query) or die($this->link->error . __LINE__);
-            if ($result->num_rows > 0) {
-                return $result;
-            } else {
-                return false;
-            }
+    public function select($query)
+    {
+        $result = $this->link->query($query) or die($this->link->error . __LINE__);
+        if ($result->num_rows > 0) {
+            return $result;
+        } else {
+            return false;
         }
+    }
 
     //insert data
     public function insert($query)

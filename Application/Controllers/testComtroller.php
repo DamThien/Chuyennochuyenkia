@@ -1,11 +1,10 @@
 <?php 
 require './categoryClass.php';
 
-$category = new showCategory();
 
 
-$result = $category->query_category();
-
+$result = $category->queryCategory();
+var_dump($result);
 
 
 // $category_name = "Danh mục B";

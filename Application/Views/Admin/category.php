@@ -1,9 +1,10 @@
-<?php
+t<?php
 include './headerAdmin.php';
 include './menuAdmin.php';
 require('../../Controllers/categoryClass.php');
 
-$category = new category();
+$category = new category;
+
 $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $category_name = $_POST['category_name'];
@@ -15,10 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+$showCategory = $category ->showCategory();
+
 ?>
 <main role="main">
     <div class="admin_content-category">
-        <h1>Thêm danh mục</h1>
+        <h1>Danh mục</h1>
         <form method="POST">
             <label>Nhập tên danh mục</label>
             <input type="text" name="category_name" required>
@@ -26,5 +29,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php echo $message ?>
         </form>
     </div>
+    <div class="category_list">
+        <table>
+            <tr>
+                <th>Stt</th>
+                <th>ID</th>
+                <th>Tên danh mục</th>
+                <th>Ghi chú</th>
+            </tr>
+           
+           <?php
+            $Stt=0;
+            foreach ($showCategory as $item) {
+                $Stt++;
+                echo'<tr>
+                    <td>'.$Stt.'</td>
+                    <td>'.$item['id_category'].'</td>
+                    <td>'.$item['name_category'].'</td>
+                    <td><a href="#">Sửa</a>|<a href="#">xóa</a></td>
+                    </tr>';
+            ?>
+
+            <?php }?>
+        </table>
+    </div>
+
+
 </main>
->
