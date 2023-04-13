@@ -46,7 +46,7 @@ $showCategory = $category ->showCategory();
                     <td>'.$Stt.'</td>
                     <td>'.$item['id_category'].'</td>
                     <td>'.$item['name_category'].'</td>
-                    <td><a href="#">Sửa</a>|<a href="#">xóa</a></td>
+                    <td><a href="EditCategory.php?id_category='.$item['id_category']. '">Sửa</a>|<a href="DeleteCategory.php?id_category=' . $item['id_category'] . '">xóa</a></td>
                     </tr>';
             ?>
 
