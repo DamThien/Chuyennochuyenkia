@@ -1,7 +1,7 @@
 <?php
-// include './headerAdmin.php';
-require_once('../../Controllers/categoryClass.php');
-require_once('../../Controllers/post_class.php');
+include './headerAdmin.php';
+include_once('../../Controllers/postClass.php');
+
 
 $post = new post;
 
@@ -13,12 +13,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
     $post_descript = $_POST['post_descript'];
     $post_input = $_POST['post_input'];
 
-    $insert_port = $post -> insert_post($post_name, $post_date, $post_category, $post_category, $post_descript,$post_input);
+    $insert_port = $post -> insert_post($post_name, $post_date, $post_descript, $post_input, $post_category);
 
 
 }
-
-
 
 ?>
 
@@ -36,8 +34,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
             <select name="post_category">
                 <option value="">--Chọn--</option>
                 <?php
-                $category = new category;
-                $categories = $category->showCategory();
+                $categories = $post -> showCategory();
+                // $categories = $category->showCategory();
                 foreach ($categories as $item) {
                     echo '<option value="' . $item['id_category'] . '">' . $item['name_category'] . '</option>';
                 }
@@ -53,6 +51,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
     </div>
 </main>
 <?php 
-// include './menuAdmin.php' 
+include './menuAdmin.php' ;
 
 ?>

@@ -1,7 +1,6 @@
 <?php
 
 require_once 'D:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php';
-use Models\classDatabase\Database;
 
 class category
 {

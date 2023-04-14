@@ -1,9 +1,8 @@
 <?php 
-
-namespace Models\classDatabase;
-
 include_once 'config.php';
-use mysqli;
+?>
+<?php
+
 
 class Database
 {
