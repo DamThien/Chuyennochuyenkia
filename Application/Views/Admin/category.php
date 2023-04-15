@@ -1,7 +1,8 @@
-t<?php
+<?php
 include './headerAdmin.php';
 include './menuAdmin.php';
 require('../../Controllers/categoryClass.php');
+
 
 $category = new category;
 
@@ -9,24 +10,18 @@ $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $category_name = $_POST['category_name'];
     $insert_category = $category->insert_category($category_name);
-    if ($insert_category) {
-        $message = "<p class='success_message'>Chèn danh mục thành công!!!</p>";
-    } else {
-        $message = "<p class='error_message'>Lỗi khi chèn danh mục!</p>";
-    }
 }
 
-$showCategory = $category ->showCategory();
+$showCategory = $category->showCategory();
 
 ?>
 <main role="main">
     <div class="admin_content-category">
         <h1>Danh mục</h1>
-        <form method="POST">
+        <form method="POST" name="categoryform" onsubmit="validateform('categoryform','btn_save')" >
             <label>Nhập tên danh mục</label>
-            <input type="text" name="category_name" required>
+            <input type="text" name="category_name" require>
             <button type="submit" name="btn_save"> Save</button>
-            <?php echo $message ?>
         </form>
     </div>
     <div class="category_list">
@@ -35,24 +30,26 @@ $showCategory = $category ->showCategory();
                 <th>Stt</th>
                 <th>ID</th>
                 <th>Tên danh mục</th>
-                <th>Ghi chú</th>
+                <th>Trạng thái</th>
             </tr>
-           
-           <?php
-            $Stt=0;
+
+            <?php
+            $Stt = 0;
             foreach ($showCategory as $item) {
                 $Stt++;
-                echo'<tr>
-                    <td>'.$Stt.'</td>
-                    <td>'.$item['id_category'].'</td>
-                    <td>'.$item['name_category'].'</td>
-                    <td><a href="EditCategory.php?id_category='.$item['id_category']. '">Sửa</a>|<a href="DeleteCategory.php?id_category=' . $item['id_category'] . '">xóa</a></td>
+                echo '<tr>
+                    <td>' . $Stt . '</td>
+                    <td>' . $item['id_category'] . '</td>
+                    <td>' . $item['name_category'] . '</td>
+                    <td><a href="EditCategory.php?id_category=' . $item['id_category'] . '">Sửa</a>|<a href="DeleteCategory.php?id_category=' . $item['id_category'] . '">xóa</a></td>
                     </tr>';
             ?>
 
-            <?php }?>
+            <?php } ?>
         </table>
+
     </div>
+
 
 
 </main>
