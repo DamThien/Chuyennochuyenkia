@@ -23,12 +23,12 @@ include 'D:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php'
 
 
 
-    public function showCategory()
+    public function showPost()
     {
-        $query = "SELECT * FROM categories ORDER BY id_category ASC";
+        $query = "SELECT * FROM articles ORDER BY id_Article ASC";
         $result = $this->db->select($query);
         return $result;
-    }
+    }   
 
     public function get_category($id_category)
     {

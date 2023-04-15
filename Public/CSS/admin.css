@@ -154,9 +154,20 @@ li:hover ul.posts_menu-item {
   margin-top: 20px;
   border-collapse: collapse;
 }
-.category_list table tr th,td {
+.category_list table tr th,
+td {
   border: 1px solid #000000;
-  
+}
+/*------------post list ------------------*/
+.post_list table {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+.post_list table tr th,
+td {
+  border: 1px solid #000000;
 }
 
 /* -----------------typography------------------ */
