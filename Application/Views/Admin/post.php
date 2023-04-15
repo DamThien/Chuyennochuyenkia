@@ -35,7 +35,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
                 <option value="">--Chọn--</option>
                 <?php
                 $categories = $post -> showPost();
-                // $categories = $category->showCategory();
                 foreach ($categories as $item) {
                     echo '<option value="' . $item['id_category'] . '">' . $item['name_category'] . '</option>';
                 }

@@ -1,26 +1,26 @@
-t<?php
-    include './headerAdmin.php';
-    include './menuAdmin.php';
-    require('../../Controllers/categoryClass.php');
+<?php
+include './headerAdmin.php';
+include './menuAdmin.php';
+require('../../Controllers/categoryClass.php');
 
-    $category = new category;
 
-    $message = '';
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $category_name = $_POST['category_name'];
-        $insert_category = $category->insert_category($category_name);
-      
-    }
+$category = new category;
 
-    $showCategory = $category->showCategory();
+$message = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $category_name = $_POST['category_name'];
+    $insert_category = $category->insert_category($category_name);
+}
 
-    ?>
+$showCategory = $category->showCategory();
+
+?>
 <main role="main">
     <div class="admin_content-category">
         <h1>Danh mục</h1>
-        <form method="POST" name="categoryform" onsubmit="validateform()">
+        <form method="POST" name="categoryform" onsubmit="validateform('categoryform','btn_save')" >
             <label>Nhập tên danh mục</label>
-            <input type="text" name="category_name" required>
+            <input type="text" name="category_name" require>
             <button type="submit" name="btn_save"> Save</button>
         </form>
     </div>
@@ -47,15 +47,9 @@ t<?php
 
             <?php } ?>
         </table>
-        <script>
-            function validateform() {
-                var x = document.forms['categoryform']['btn_save'].value;
-                    if(x==""){
-                        alert('Thêm danh mục thành công!!!!')
-                    }
-            }
-        </script>
+
     </div>
+
 
 
 </main>

@@ -24,6 +24,7 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="//cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
+<script src="../../../Public/JS/message.js"></script>
 
 <script>
     CKEDITOR.replace('post_input');
