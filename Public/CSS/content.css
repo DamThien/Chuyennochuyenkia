@@ -1,0 +1,97 @@
+
+.img-s1{
+    height: 510px;
+    width: 100%;
+}
+.img-s1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 10px; */
+}
+.img-s2{
+    height: 510px;
+    width: 100%;
+}
+.img-s2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 10px; */
+}.img-s3{
+    height: 510px;
+    width: 100%;
+}
+.img-s3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 10px; */
+}.img-s4{
+    height: 510px;
+    width: 100%;
+}
+.img-s4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 10px; */
+}
+.trevle{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+}
+.backgroud-left{
+    
+width: 99.3%; 
+height:300px;
+margin-bottom: 10px;
+
+}
+.backgroud-right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;  
+}
+.backgroud-right-item{
+    width: 98.4%; 
+    height:200px;
+}
+.title-slider-s1{
+   
+    position: absolute;
+    top:84%;
+    margin-left: 20px;
+    color: rgb(255, 251, 251);
+    font-size: 20px;
+}
+
+.title-slider-s2{  
+    position: absolute;
+    top:88%;
+    margin-left: 20px;
+    color: rgb(255, 251, 251);
+    font-size: 20px;
+}
+/* .title-slider-halong{  
+    position: absolute;
+    top:56%;
+    margin-left: 20px;
+    color: rgb(255, 251, 251);
+    font-size: 20px;
+}
+.title-slider-chuavang{  
+    position: absolute;
+    top:86%;
+    margin-left: 20px;
+    color: rgb(255, 251, 251);
+    font-size: 20px;
+}
+.title-slider-ninhbinh{  
+    position: absolute;
+    top:83%;
+    margin-left: 20px;
+    color: rgb(255, 251, 251);
+    font-size: 20px;
+} */
