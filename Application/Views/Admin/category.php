@@ -6,7 +6,6 @@ require('../../Controllers/categoryClass.php');
 
 $category = new category;
 
-$message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $category_name = $_POST['category_name'];
     $insert_category = $category->insert_category($category_name);

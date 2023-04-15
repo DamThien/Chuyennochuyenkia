@@ -25,37 +25,13 @@ include 'D:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php'
 
     public function showPost()
     {
-        $query = "SELECT * FROM articles ORDER BY id_Article ASC";
+        $query = "SELECT * FROM categories ORDER BY id_category ASC";
         $result = $this->db->select($query);
         return $result;
     }   
 
-    public function get_category($id_category)
-    {
-        $query = "SELECT * FROM categories WHERE id_category= '$id_category'";
-        $result = $this->db->select($query);
-        return $result;
-    }
 
-    public function update_category($name_category, $id_category)
-    {
-        $query = " UPDATE categories SET name_category = '$name_category' WHERE id_category= '$id_category'";
-        $result = $this->db->update($query);
-        header('location: category.php');
-        return $result;
-    }
-
-    public function delete_category($id_category)
-    {
-        $query = " DELETE FROM categories WHERE id_category= '$id_category'";
-        $result = $this->db->delete($query);
-        header('location: category.php');
-        return $result;
-    }
-    }
-
-
-
+}
 
 
 ?>
