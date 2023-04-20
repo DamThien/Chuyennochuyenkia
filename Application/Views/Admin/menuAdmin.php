@@ -7,7 +7,7 @@
                 <a class="posts_menu" href="#">Quản lý bài viết</a>
                 <ul class="posts_menu-item">
                     <li>
-                        <a href="#">Danh sách</a>
+                        <a href="listPost.php">Danh sách</a>
                     </li>
                     <li>
                         <a href="post.php">Đăng bài</a>
@@ -24,6 +24,7 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="//cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
+<script src="../../../Public/JS/message.js"></script>
 
 <script>
     CKEDITOR.replace('post_input');

@@ -43,11 +43,17 @@ class Database
     //insert data
     public function insert($query)
     {
-        $insert_row = $this->link->query($query) or die($this->link->error . __LINE__);
+        // $insert_row = $this->link->query($query) or die($this->link->error . __LINE__);
+        // if ($insert_row) {
+        //     return $insert_row;
+        // } else {
+        //     return false;
+        // }
+        $insert_row = $this->link->query($query);
         if ($insert_row) {
-            return $insert_row;
+            return true; // nếu thành công thì trả về true
         } else {
-            return false;
+            throw new Exception($this->link->error); // nếu lỗi thì ném ra ngoại lệ với thông báo lỗi
         }
     }
 

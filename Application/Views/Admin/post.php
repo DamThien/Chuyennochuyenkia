@@ -2,7 +2,6 @@
 include './headerAdmin.php';
 include_once('../../Controllers/postClass.php');
 
-
 $post = new post;
 
 if($_SERVER['REQUEST_METHOD'] === 'POST')
@@ -35,7 +34,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
                 <option value="">--Chọn--</option>
                 <?php
                 $categories = $post -> showCategory();
-                // $categories = $category->showCategory();
                 foreach ($categories as $item) {
                     echo '<option value="' . $item['id_category'] . '">' . $item['name_category'] . '</option>';
                 }
@@ -46,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
             <textarea style="height:10%" name="post_descript"></textarea>
             <label>Nội dung bài viết</label>
             <textarea name="post_input"></textarea>
-            <button type="submit" name="btn_save"> Save</button>
+            <button type="submit" name="btn_save">Save</button>
         </form>
     </div>
 </main>
