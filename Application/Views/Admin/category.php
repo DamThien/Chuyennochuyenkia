@@ -20,7 +20,7 @@ t<?php
         <h1>Danh mục</h1>
         <form method="POST" name="categoryform" onsubmit="validateform()">
             <label>Nhập tên danh mục</label>
-            <input type="text" name="category_name" required>
+            <input type="text" name="category_name" require>
             <button type="submit" name="btn_save"> Save</button>
         </form>
     </div>
