@@ -1,5 +1,5 @@
 <?php 
-include 'D:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php'
+require_once $_SERVER['DOCUMENT_ROOT'].'\Chuyennochuyenkia\Application\Models\database.php'
 
 ?>
 
@@ -38,6 +38,14 @@ include 'D:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php'
             $result = $this->db->select($query);
             return $result;
         }
+
+    public function delete_Article($Article_id)
+    {
+        $query = " DELETE FROM articles WHERE id_Article= '$Article_id'";
+        $result = $this->db->delete($query);
+        header('location: listPost.php');
+        return $result;
+    }
 
 }
 

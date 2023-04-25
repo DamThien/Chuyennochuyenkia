@@ -1,7 +1,7 @@
 <?php
-    include './headerAdmin.php';
-    include './menuAdmin.php';
-    require('../../Controllers/categoryClass.php');
+    require_once   $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Views/Admin/headerAdmin.php';
+    require_once   $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Views/Admin/menuAdmin.php';
+    require_once   $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Controllers/categoryClass.php';
 
     $category = new category;
 

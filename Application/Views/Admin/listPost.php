@@ -1,12 +1,14 @@
 <?php
-include './headerAdmin.php';
-include './menuAdmin.php';
-include_once('../../Controllers/postClass.php');
+require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Views/Admin/headerAdmin.php';
+require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Views/Admin/menuAdmin.php';
+require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Controllers/postClass.php';
 
 $list_post = new post;
 
 
 $show_ListPost = $list_post->showPost();
+
+
 
 ?>
 <main role="main">
@@ -36,7 +38,7 @@ $show_ListPost = $list_post->showPost();
                         <td>'.$value['name_category'].'</td>
                         <td>' . $value['view'] . '</td>
                         <td></td>
-                        <td><a href="#">sữa</a>|<a href="">Xóa</a></td>
+                        <td><a href="#">sửa</a>|<a href="DeletePost.php?id_Article='.$value['id_Article'].'">Xóa</a></td>
                         </tr>';
                 ?>
 
@@ -47,3 +49,4 @@ $show_ListPost = $list_post->showPost();
 
 
 </main>
+

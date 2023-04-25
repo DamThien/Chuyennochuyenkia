@@ -51,9 +51,9 @@ class Database
         // }
         $insert_row = $this->link->query($query);
         if ($insert_row) {
-            return true; // nếu thành công thì trả về true
+            return true; 
         } else {
-            throw new Exception($this->link->error); // nếu lỗi thì ném ra ngoại lệ với thông báo lỗi
+            throw new Exception($this->link->error); 
         }
     }
 

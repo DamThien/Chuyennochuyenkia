@@ -1,6 +1,6 @@
 <?php
-include './headerAdmin.php';
-include_once('../../Controllers/postClass.php');
+require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Views/Admin/headerAdmin.php';
+require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Controllers/postClass.php';
 
 $post = new post;
 
@@ -18,9 +18,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
 }
 
 ?>
-
-
-
 <main role="main">
     <div class="admin_content-post">
         <h1>Thêm bài đăng</h1>
@@ -49,6 +46,5 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
     </div>
 </main>
 <?php 
-include './menuAdmin.php' ;
-
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Chuyennochuyenkia/Application/Views/Admin/menuAdmin.php' ;
 ?>

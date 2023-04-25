@@ -1,11 +1,10 @@
 t<?php
-    include './headerAdmin.php';
-    include './menuAdmin.php';
-    require('../../Controllers/categoryClass.php');
+    require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Views/Admin/headerAdmin.php';
+    require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Views/Admin/menuAdmin.php';
+    require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Controllers/categoryClass.php';
 
     $category = new category;
 
-    $message = '';
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $category_name = $_POST['category_name'];
         $insert_category = $category->insert_category($category_name);
