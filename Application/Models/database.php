@@ -10,7 +10,7 @@ class Database
     public $user = DB_USER;
     public $pass = DB_PASS;
     public $dbname = DB_NAME;
-    public $dbport = 3307;
+    public $dbport = 3306;
 
     public $link;
     public $error;
