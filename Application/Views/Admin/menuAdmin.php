@@ -1,5 +1,4 @@
-<body>
-
+<div>
     <nav role='navigation'>
         <ul class="main">
             <li class="posts">
@@ -19,8 +18,4 @@
             <li class="users"><a href="#">Quản lý tài khoản</a></li>
         </ul>
     </nav>
-
-</body>
-
-
-</html>
+</div>

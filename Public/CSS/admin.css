@@ -198,7 +198,7 @@ td {
 }
 
 /*------------------POST-----------------------*/
-  .admin_content-post {
+    .admin_content-post {
         max-width: 600px;
         margin: 0 auto;
         padding: 20px;
@@ -260,26 +260,21 @@ td {
     .admin_content-post button[type="submit"]:hover{
         background-color: #dd2e2e;
     }
-/*------------post list ------------------*/
-.post_list table {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  padding-top: 50px;
-  border-collapse: collapse;
-}
+    /*------------post list ------------------*/
+    .post_list table {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 50px;
+    border-collapse: collapse;
+    }
 
-.post_list table tr th,
-.post_list table tr td {
-  border: 1px solid #000000;
-   
-}
+    .post_list>table>tr>th,
+    .post_list table tr td {
+    border: 1px solid #000000;
+    
+    }
 
-.post_list table tr td img {
-  max-width: 100px; 
-  max-height: 100px; 
-  padding: 5px;
-}
 
     .center-column {
         text-align: center;
@@ -439,4 +434,8 @@ label {
     .panel.secondary {
         width: 23%;
     }
+}
+section{
+    display: block;
+    position: relative;
 }
