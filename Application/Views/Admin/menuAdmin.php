@@ -1,5 +1,4 @@
-<body>
-
+<div>
     <nav role='navigation'>
         <ul class="main">
             <li class="posts">
@@ -19,15 +18,4 @@
             <li class="users"><a href="#">Quản lý tài khoản</a></li>
         </ul>
     </nav>
-
-</body>
-<script>
-    CKEDITOR.replace('post_input', {
-        filebrowserBrowseUrl: 'https://example.com/ckfinder/ckfinder.html',
-        filebrowserUploadUrl: 'https://example.com/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
-    });
-    CKEDITOR.replace('post_input1');
-   
-</script>
-
-</html>
+</div>

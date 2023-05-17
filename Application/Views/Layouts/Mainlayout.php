@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="<?= ImageLink("logo.png") ?>">
-
+    
     <title><?= $data['page'] ?></title>
 </head>
 
@@ -91,7 +91,9 @@
 </html>
 
 <?php
+
 RenderCSS('header');
 RenderCSS('footer');
 RenderJs('slide');
+RenderCSS('Main');
 ?>

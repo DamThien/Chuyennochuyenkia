@@ -16,6 +16,11 @@ function RenderCSS($cssFileName)
 {
 echo "<link rel='stylesheet' href='" . ROOT_URL . "./Public/CSS/$cssFileName.css' type='text/css'>\n";
 }
+
+function RenderFramework($cssFileName)
+{
+    echo "<script src='" . ROOT_URL . "./Framework/$cssFileName.js' type='text/javascript'></script>\n";
+}
 function RenderJs($jsFileName)
 {
     echo "<script src='" . ROOT_URL . "./Public/JS/$jsFileName.js'></script>\n";

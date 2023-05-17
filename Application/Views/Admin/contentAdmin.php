@@ -1,6 +1,5 @@
-<body>
-   <?php  require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\listPost.php'; ?>
+<?php 
 
-</body>
-
-</html>
+   require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\listPost.php'; 
+   
+?>
