@@ -21,7 +21,7 @@
                 <input class="search" type="text" value="Tìm Kiếm">
 
                 <div class="list">
-                    <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Thời Sự</a>
+                    <a class="navig" href="<?= Redirect("Detail")?>">Thời Sự</a>
                     <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Thế Giới </a>
                     <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Kinh Tế</a>
                     <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Sức Khỏe</a>
