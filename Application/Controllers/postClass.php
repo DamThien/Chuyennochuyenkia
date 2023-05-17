@@ -1,6 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Models\database.php'
 
+
 ?>
 
 

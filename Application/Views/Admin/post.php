@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
 
     </div>
+
     <script>
         function validateForm() {
             var x = document.forms['postForm']['btn_save'].value;

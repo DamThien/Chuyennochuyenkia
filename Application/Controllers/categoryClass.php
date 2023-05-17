@@ -2,6 +2,7 @@
 
 // require_once $_SERVER['DOCUMENT_ROOT'].'D:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . "\Chuyennochuyenkia\Application\Models\database.php";
+
 class category
 {
     private $db;
