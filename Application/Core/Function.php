@@ -10,7 +10,7 @@ function Error()
 function Redirect($controller, $action = "")
 {
     $action = $action != "" ? "/$action" : "";
-    return "/Chuyennochuyenkia/Application/Controllers/$controller" . "{$action}";
+    return "/Chuyennochuyenkia/$controller" . "{$action}";
 }
 function RenderCSS($cssFileName)
 {

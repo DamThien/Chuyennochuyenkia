@@ -3,7 +3,7 @@
         require_once "./Application/Models/$model.php";
         return new $model;
     }
-    public function view($layout) {
-        require_once "./Application/Views/Pages/$layout.php";
+    public function view($layout, $data=[]) {
+        require_once "./Application/Views/Layouts/$layout.php";
     }
 }
