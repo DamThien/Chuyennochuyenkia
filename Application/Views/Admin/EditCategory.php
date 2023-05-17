@@ -15,11 +15,11 @@
     if ($get_category) {
         $result = $get_category->fetch_assoc();
     }
-?>
-<?php
-if($_SERVER['REQUEST_METHOD']=== 'POST'){
+
+    if($_SERVER['REQUEST_METHOD']=== 'POST'){
     $category_name =$_POST['category_name'];
     $update_Category = $category->update_category($category_name, $category_id);
+    
 }
 ?>
 

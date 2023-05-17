@@ -1,9 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Models\database.php'
-
-
 ?>
-
 
 <?php
 
@@ -73,7 +70,7 @@ class post
                       WHERE id_Article= '$id_Article'";
 
         $result = $this->db->update($query);
-        header('location: listPost.php');
+        header('location: ../../../Admin');
         return $result;
 
     }
@@ -82,7 +79,7 @@ class post
     {
         $query = " DELETE FROM articles WHERE id_Article= '$Article_id'";
         $result = $this->db->delete($query);
-        header('location: listPost.php');
+        header('location: ../../../Admin');
         return $result;
     }
 }
