@@ -1,5 +1,5 @@
-<?php 
-include_once 'config.php';
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Models\config.php';
 ?>
 <?php
 
@@ -49,6 +49,12 @@ class Database
         } else {
             return false;
         }
+        // $insert_row = $this->link->query($query);
+        // if ($insert_row) {
+        //     return true; 
+        // } else {
+        //     throw new Exception($this->link->error); 
+        // }
     }
 
     //update data

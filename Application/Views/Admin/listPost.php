@@ -1,47 +1,58 @@
-t<?php
-    include './headerAdmin.php';
-    include './menuAdmin.php';
-    include_once('../../Controllers/postClass.php');
+<?php
+require_once $_SERVER['DOCUMENT_ROOT']. '\Chuyennochuyenkia\Application\Views\Admin\headerAdmin.php';
+require_once $_SERVER['DOCUMENT_ROOT']. '\Chuyennochuyenkia\Application\Views\Admin\menuAdmin.php';
+require_once $_SERVER['DOCUMENT_ROOT']. '\Chuyennochuyenkia\Application\Controllers\postClass.php';
 
-    $list_post = new post;
+$list_post = new post;
 
 
-    $show_ListPost = $list_post->showPost();
+$show_ListPost = $list_post->showPost();
 
-    ?>
+
+
+?>
 <main role="main">
     <div class="post_list">
+      
         <table>
             <tr>
-                <th>Stt</th>
-                <th>ID</th>
                 <th>Tiêu đề</th>
-                <th>Ngày đăng</th>
-                <th>Mô tả ngắn</th>
-                <th>Nội dụng</th>
+                <th>Ảnh</th>
+                <th>Người đăng</th>
                 <th>Danh mục</th>
-                <th>Trạng Thái</th>
                 <th>Lượt xem</th>
+                <th>Trạng Thái</th>
+                <th>Hành động</th>
             </tr>
-            <?php
-            $Stt = 0;
-            foreach ($show_ListPost as $item) {
-                $Stt++;
-                echo '<tr>
-                    <td>' . $Stt . '</td>
-                    <td>' . $item['id_Article'] . '</td>
-                    <td>' . $item['title_Article'] . '</td>
-                    <td>' .$item['date_posted']. '</td>
-                    <td>' . $item['short_describe'] . '</td>
-                    <td>'.$item['content']. '</td>
-                     <td>' . $item['date_posted'] . '</td>
-                    </tr>';
-            ?>
+                <?php
+                if (is_array($show_ListPost) || is_object($show_ListPost)) {
+                        foreach ($show_ListPost as $value) {
+                            //cắt bớt tiêu đề
+                            $title = (strlen($value['title_Article']) > 30) ? 
+                            substr($value['title_Article'], 0, 30) . "..." : $value['title_Article'];
 
-            <?php } ?>
+                            echo '<tr>
+                                <td class="title-column">' . $title . '</td>
+                                <td class="center-column"><img src="PostAvatar/' . $value['avatar'] . '"></td>
+                                <td class="center-column"></td>
+                                <td class="center-column">' . $value['name_category'] . '</td>
+                                <td class="center-column">' . $value['view'] . '</td>
+                                <td class="center-column"></td>
+                                <td class="center-column"><a href="EditPost.php?id_Article=' . $value['id_Article'] . '">sửa</a>|<a href="DeletePost.php?id_Article=' . $value['id_Article'] . '">Xóa</a></td>
+                                </tr>';
+                    
+                            }
+                } else {
+                    echo '<span style="color: red;">Invalid data. Please check your data.</span>';
+                }    
+
+                ?>
+
+              
 
         </table>
     </div>
 
 
 </main>
+
