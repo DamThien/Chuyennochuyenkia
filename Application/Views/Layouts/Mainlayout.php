@@ -15,13 +15,13 @@
     <header class="header">
         <div class="head-item">
             <div class="img-logo">
-                <a href="<?= Redirect("Home") ?>"><img class="logotame" src="<?= ImageLink("logo.png") ?>" alt=""></a>
+                <img class="logotame" src="<?= ImageLink("logo.png") ?>" alt="">
             </div>
             <div class="form">
                 <input class="search" type="text" value="Tìm Kiếm">
 
                 <div class="list">
-                    <a class="navig" href="<?= Redirect("Detail") ?>">Thời Sự</a>
+                    <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Thời Sự</a>
                     <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Thế Giới </a>
                     <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Kinh Tế</a>
                     <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Sức Khỏe</a>
@@ -39,16 +39,14 @@
     <!-- phần content -->
 
     <?php
-    require_once "./Application/Views/Pages/{$data['page']}.php";
+    require_once "./Application/Views/Pages/Home.php";
     ?>
     <!-- phan Footer -->
     <section class="pass5">
         <div class="footer">
             <div class="footer-one">
-                <a href="<?= Redirect("Home") ?>">
-                    <img class="logo" src="<?= ImageLink("logo.png") ?>" alt="">
-                </a>
-                    <p class="footer-information-img">Hân Hạnh Đồng Hành</p>
+                <img class="logo" src="<?= ImageLink("logo.png") ?>" alt="">
+                <p class="footer-information-img">Hân Hạnh Đồng Hành</p>
             </div>
             <div class="">
                 <h1 class="footer-information"><a href="">Về chúng tôi</a></h1>
@@ -89,9 +87,3 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </html>
-
-<?php
-RenderCSS('header');
-RenderCSS('footer');
-RenderJs('slide');
-?>
