@@ -1,14 +1,13 @@
 t<?php
-    require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Views/Admin/headerAdmin.php';
-    require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Views/Admin/menuAdmin.php';
-    require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Controllers/categoryClass.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\headerAdmin.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\menuAdmin.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Controllers\categoryClass.php';
 
     $category = new category;
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $category_name = $_POST['category_name'];
         $insert_category = $category->insert_category($category_name);
-      
     }
 
     $showCategory = $category->showCategory();
@@ -19,7 +18,7 @@ t<?php
         <h1>Danh mục</h1>
         <form method="POST" name="categoryform" onsubmit="validateform()">
             <label>Nhập tên danh mục</label>
-            <input type="text" name="category_name" require>
+            <input type="text" name="category_name" required>
             <button type="submit" name="btn_save"> Save</button>
         </form>
     </div>
@@ -34,27 +33,30 @@ t<?php
 
             <?php
             $Stt = 0;
-            foreach ($showCategory as $item) {
-                $Stt++;
-                echo '<tr>
-                    <td>' . $Stt . '</td>
-                    <td>' . $item['id_category'] . '</td>
-                    <td>' . $item['name_category'] . '</td>
-                    <td><a href="EditCategory.php?id_category=' . $item['id_category'] . '">Sửa</a>|<a href="DeleteCategory.php?id_category=' . $item['id_category'] . '">xóa</a></td>
-                    </tr>';
-            ?>
-
-            <?php } ?>
-        </table>
-        <script>
-            function validateform() {
-                var x = document.forms['categoryform']['btn_save'].value;
-                    if(x==""){
-                        alert('Thêm danh mục thành công!!!!')
-                    }
+            if (is_array($showCategory) || is_object($showCategory)) {
+                foreach ($showCategory as $item) {
+                    $Stt++;
+                    echo '<tr>
+                        <td>' . $Stt . '</td>
+                        <td>' . $item['id_category'] . '</td>
+                        <td>' . $item['name_category'] . '</td>
+                        <td><a href="EditCategory.php?id_category=' . $item['id_category'] . '">Sửa</a>|<a href="DeleteCategory.php?id_category=' . $item['id_category'] . '">xóa</a></td>
+                        </tr>';
+                }
+            } else {
+                echo '<span style="color: red;">Invalid data. Please check your data.</span>';
             }
-        </script>
+            ?>
+        </table>
     </div>
+    <script>
+        function validateform() {
+            var x = document.forms['categoryform']['btn_save'].value;
+            if (x == "") {
+                alert('Thêm danh mục thành công!!!!')
+            }
+        }
+    </script>
 
 
 </main>

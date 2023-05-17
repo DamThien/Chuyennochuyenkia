@@ -1,5 +1,5 @@
-<?php 
-include_once 'config.php';
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Models\config.php';
 ?>
 <?php
 
@@ -43,18 +43,18 @@ class Database
     //insert data
     public function insert($query)
     {
-        // $insert_row = $this->link->query($query) or die($this->link->error . __LINE__);
-        // if ($insert_row) {
-        //     return $insert_row;
-        // } else {
-        //     return false;
-        // }
-        $insert_row = $this->link->query($query);
+        $insert_row = $this->link->query($query) or die($this->link->error . __LINE__);
         if ($insert_row) {
-            return true; 
+            return $insert_row;
         } else {
-            throw new Exception($this->link->error); 
+            return false;
         }
+        // $insert_row = $this->link->query($query);
+        // if ($insert_row) {
+        //     return true; 
+        // } else {
+        //     throw new Exception($this->link->error); 
+        // }
     }
 
     //update data

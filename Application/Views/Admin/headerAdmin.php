@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../../Public/CSS/admin.css">
+    <link rel="stylesheet" href="../../../Public/CSS/admin.css?v= <?php echo time() ?> ">
+
+    <script src="../../../Framework/ckeditor/ckeditor.js"></script>
+    <script src="../../../Framework/ckfinder/ckfinder.js"></script>
+  
+
     <title>Admin panel</title>
 </head>
 

@@ -2,7 +2,6 @@
 
     <nav role='navigation'>
         <ul class="main">
-            <li class="dashboard"><a href="adminView.php">Dashboard</a></li>
             <li class="posts">
                 <a class="posts_menu" href="#">Quản lý bài viết</a>
                 <ul class="posts_menu-item">
@@ -22,12 +21,13 @@
     </nav>
 
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="//cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
-<script src="../../../Public/JS/message.js"></script>
-
 <script>
-    CKEDITOR.replace('post_input');
+    CKEDITOR.replace('post_input', {
+        filebrowserBrowseUrl: 'https://example.com/ckfinder/ckfinder.html',
+        filebrowserUploadUrl: 'https://example.com/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+    });
+    CKEDITOR.replace('post_input1');
+   
 </script>
 
 </html>

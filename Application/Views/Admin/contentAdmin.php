@@ -1,12 +1,5 @@
 <body>
-    <main role="main">
-
-        <section class="panel important">
-            <h2>Welcome to the admin panel</h2>
-
-        </section>
-
-    </main>
+   <?php  require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\listPost.php'; ?>
 
 </body>
 

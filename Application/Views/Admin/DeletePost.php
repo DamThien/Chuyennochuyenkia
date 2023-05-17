@@ -1,5 +1,5 @@
 <?php
-    require_once $_SERVER['DOCUMENT_ROOT']. '/Chuyennochuyenkia/Application/Controllers/postClass.php';
+    require_once $_SERVER['DOCUMENT_ROOT']. '\Chuyennochuyenkia\Application\Controllers\postClass.php';
 
     $Article = new post;
     if (!isset($_GET['id_Article']) || $_GET['id_Article'] == NULL) {
