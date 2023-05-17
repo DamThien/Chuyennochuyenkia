@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $post_input = $_POST['post_input'];
     $post_avatar = $_FILES['post_avatar']['name'];
     move_uploaded_file($_FILES['post_avatar']['tmp_name'], "PostAvatar/" . $_FILES['post_avatar']['name']);
-    
+
     $insert_port = $post->insert_post($post_name, $post_date, $post_descript, $post_input, $post_category, $post_avatar);
 }
 
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </select>
             </select>
             <label>Mô tả ngắn</label>
-            <textarea  name="post_descript" id="post_input1" class="post_descript"></textarea>
+            <textarea name="post_descript" id="post_input1" class="post_descript"></textarea>
             <label>Ảnh đại diện</label>
             <input type="file" name="post_avatar" class="post_avatar">
             <label>Nội dung bài viết</label>
@@ -54,6 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 alert('Thêm bài viết thành công!!!!')
             }
         }
+    </script>
+    <script>
+        CKEDITOR.replace('post_input', {
+            filebrowserBrowseUrl: 'https://example.com/ckfinder/ckfinder.html',
+            filebrowserUploadUrl: 'https://example.com/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+        });
+        CKEDITOR.replace('post_input1');
     </script>
 
 </main>
