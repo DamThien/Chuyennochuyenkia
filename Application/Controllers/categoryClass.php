@@ -1,6 +1,6 @@
 <?php
 
-require_once 'D:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php';
+require_once 'C:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php';
 
 class category
 {

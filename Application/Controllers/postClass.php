@@ -1,5 +1,5 @@
 <?php 
-include 'D:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php'
+include 'C:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php'
 
 ?>
 
@@ -25,7 +25,7 @@ include 'D:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php'
 
     public function showPost()
     {
-        $query = "SELECT * FROM articles ORDER BY id_Article ASC";
+        $query = "SELECT * FROM categories ORDER BY id_category ASC";
         $result = $this->db->select($query);
         return $result;
     }   

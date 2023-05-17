@@ -10,6 +10,5 @@ $(document).ready(function () {
         name='arrow-forward-outline'></ion-icon></button>`,
         autoplay: true,
         autoplaySpeed: 4000,
-
     });
 });
