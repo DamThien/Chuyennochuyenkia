@@ -6,4 +6,9 @@
     public function view($layout, $data=[]) {
         require_once "./Application/Views/Layouts/$layout.php";
     }
+
+    public function viewadmin($layout, $data = [])
+    {
+        require_once "./Application/Views/Admin/$layout.php";
+    }
 }
