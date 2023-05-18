@@ -1,7 +1,6 @@
 
 <header role="banner">
-    <h1> Admin Panel
-    </h1>
+    <h1> Admin Panel</h1>
     <ul class="utilities">
         <br>
         <li class="users"><a href="#">Admin</a></li>

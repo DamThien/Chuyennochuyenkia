@@ -1,6 +1,6 @@
 t<?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\headerAdmin.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\menuAdmin.php';
+    // require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\headerAdmin.php';
+    // require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\menuAdmin.php';
     require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Controllers\categoryClass.php';
 
     $category = new category;
@@ -38,7 +38,7 @@ t<?php
                     echo '<tr>
                         <td>' . $Stt . '</td>
                         <td>' . $item['name_category'] . '</td>
-                        <td><a href="EditCategory.php?id_category=' . $item['id_category'] . '">Sửa</a>|<a href="DeleteCategory.php?id_category=' . $item['id_category'] . '">xóa</a></td>
+                        <td><a href="./Application/Views/Admin/EditCategory.php?id_category=' . $item['id_category'] . '">Sửa</a>|<a href="./Application/Views/Admin/DeleteCategory.php?id_category=' . $item['id_category'] . '">xóa</a></td>
                         </tr>';
                 }
             } else {
