@@ -26,7 +26,6 @@ t<?php
         <table>
             <tr>
                 <th>Stt</th>
-                <th>ID</th>
                 <th>Tên danh mục</th>
                 <th>Trạng thái</th>
             </tr>
@@ -38,7 +37,6 @@ t<?php
                     $Stt++;
                     echo '<tr>
                         <td>' . $Stt . '</td>
-                        <td>' . $item['id_category'] . '</td>
                         <td>' . $item['name_category'] . '</td>
                         <td><a href="EditCategory.php?id_category=' . $item['id_category'] . '">Sửa</a>|<a href="DeleteCategory.php?id_category=' . $item['id_category'] . '">xóa</a></td>
                         </tr>';
