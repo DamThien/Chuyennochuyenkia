@@ -36,7 +36,7 @@ class category
     public function update_category($name_category,$id_category){
         $query = " UPDATE categories SET name_category = '$name_category' WHERE id_category= '$id_category'";
         $result = $this->db->update($query);
-        header('location: category.php');
+        header('location: ../../../AdminCategory');
         return $result;
 
        
@@ -45,7 +45,7 @@ class category
     public function delete_category($id_category){
         $query = " DELETE FROM categories WHERE id_category= '$id_category'";
         $result = $this->db->delete($query);
-        header('location: category.php');
+        header('location: ../../../AdminCategory');
         return $result;
     }
 }
