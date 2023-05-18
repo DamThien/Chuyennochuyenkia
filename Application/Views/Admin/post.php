@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $post_descript = $_POST['post_descript'];
     $post_input = $_POST['post_input'];
     $post_avatar = $_FILES['post_avatar']['name'];
-    move_uploaded_file($_FILES['post_avatar']['tmp_name'], "PostAvatar/" . $_FILES['post_avatar']['name']);
+    move_uploaded_file($_FILES['post_avatar']['tmp_name'], "./Public/Images/" . $_FILES['post_avatar']['name']);
 
     $insert_port = $post->insert_post($post_name, $post_date, $post_descript, $post_input, $post_category, $post_avatar);
 }

@@ -2,6 +2,6 @@
     class Admin extends Controller
     {
         function Index(){
-            $this->viewadmin("adminView");                     
+            $this->viewadmin("adminView",["page"=>"listPost"]);                     
         }
     }

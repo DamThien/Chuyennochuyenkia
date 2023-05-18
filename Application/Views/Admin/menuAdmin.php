@@ -5,10 +5,10 @@
                 <a class="posts_menu" href="#">Quản lý bài viết</a>
                 <ul class="posts_menu-item">
                     <li>
-                        <a href="listPost.php">Danh sách</a>
+                        <a href="<?= Redirect("Admin") ?>">Danh sách</a>
                     </li>
                     <li>
-                        <a href="post.php">Đăng bài</a>
+                        <a href="<?= Redirect("PostView") ?>">Đăng bài</a>
                     </li>
                     <li>
                         <a href="category.php">Danh mục</a>
