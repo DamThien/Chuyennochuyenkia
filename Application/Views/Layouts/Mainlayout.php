@@ -18,7 +18,7 @@
                 <a href="<?= Redirect("Home") ?>"><img class="logotame" src="<?= ImageLink("logo.png") ?>" alt=""></a>
             </div>
             <div class="form">
-                <input class="search" type="text" value="Tìm Kiếm">
+                <input class="search" type="text" placeholder="Tìm Kiếm">
 
                 <div class="list">
                     <a class="navig" href="<?= Redirect("Detail") ?>">Thời Sự</a>

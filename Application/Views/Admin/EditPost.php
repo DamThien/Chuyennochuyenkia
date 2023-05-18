@@ -10,18 +10,11 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Chuyennochuyenkia/Application/Views/Admin/headerAdmin.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Chuyennochuyenkia/Application/Controllers/postClass.php';
-
-=======
     <script src="../../../Framework/ckfinder/ckfinder.js"></script>
     <script src="../../../Framework/ckeditor/ckeditor.js"></script>
     <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Chuyennochuyenkia/Application/Views/Admin/headerAdmin.php';
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Chuyennochuyenkia/Application/Controllers/postClass.php';
->>>>>>> 46b6bc8f4b200f5dea6bcd5df01e8ca2328c836b
     $post = new Post;
 
     if (!isset($_GET['id_Article']) || $_GET['id_Article'] == NULL) {
@@ -62,12 +55,6 @@
         );
     }
     ?>
-<<<<<<< HEAD
-    <script src="../../../Framework/ckeditor/ckeditor.js"></script>
-    <script src="../../../Framework/ckfinder/ckfinder.js"></script>
-=======
-
->>>>>>> 46b6bc8f4b200f5dea6bcd5df01e8ca2328c836b
     <main role="main">
         <div class="admin_content-post">
             <h1>Sửa bài đăng</h1>
