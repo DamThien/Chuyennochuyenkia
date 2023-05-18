@@ -32,8 +32,9 @@
                 <input class="search" type="text" value="Tìm Kiếm">
 
                 <div class="list">
-                    <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Controllers/chitietthoitiet.controller.php?newsID=1">Thời Tiết</a>
-                    <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Controllers/chitietchinhtri.controller.php?newID=2">Thế Giới </a>
+
+                    <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Views/Pages/Layouts/chitietthoitiet.php?newsID=1">Thời Tiết</a>
+                    <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Views/Pages/Layouts/chitietthegioi.php?newsID=2">Thế Giới </a>
                     <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Views/Pages/Layouts/chitietkinhte.php?newsID=3">Kinh Tế</a>
                     <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Sức Khỏe</a>
                     <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Views/Pages/Layouts/chitietthethao.php?newsID=4">Thể Thao</a>
@@ -52,6 +53,21 @@
     <?php 
     require "../../Pages/Home.php";
     ?>
+
+
+        <div class="thongtinchithethao">
+            <div class="title-thongtinchitietthethao">
+                
+            </div>
+            <div class="content-thongtinchitietthethao">
+                
+            </div>
+
+        </div>
+    
+
+
+
     <!-- phan Footer -->
     <section class="pass5">
         <div class="footer">

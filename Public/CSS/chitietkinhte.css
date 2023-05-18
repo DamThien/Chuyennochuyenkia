@@ -1,0 +1,27 @@
+.content{
+    display: grid;
+    grid-template-columns: 80% 20% ;
+}
+.contentkinhte_steep1{
+    display: flex;
+    gap: 30px;
+    
+}
+
+.contentkinhte_steep2{
+    display: flex;
+    gap: 30px;
+    
+}
+.contentkinhte_steep3{
+    display: flex;
+    gap: 30px;
+    
+}
+.contentkinhte_steep4{
+    display: flex;
+    gap: 30px;
+    
+}
+/* _____________ */
+

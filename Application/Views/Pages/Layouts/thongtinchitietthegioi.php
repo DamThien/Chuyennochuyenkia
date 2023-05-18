@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start() ?>
 <html lang="en">
 
 <head>
@@ -14,14 +15,13 @@
     <link rel="stylesheet" href="../../../../Public/CSS/content.css">
     <link rel="stylesheet" href="../../../../Public/CSS/contentnoibat.css">
     <link rel="stylesheet" href="../../../../Public/CSS/chitietkinhte.css">
-    
+
     <title>Chuyen No Chuyen kia</title>
 </head>
 
 
 
 <body>
-    
     <!-- phàn header -->
     <section class="header">
         <div class="head-item">
@@ -32,8 +32,9 @@
                 <input class="search" type="text" value="Tìm Kiếm">
 
                 <div class="list">
-                    <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Controllers/chitietthoitiet.controller.php?newsID=1">Thời Tiết</a>
-                    <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Controllers/chitietchinhtri.controller.php?newID=2">Thế Giới </a>
+
+                    <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Views/Pages/Layouts/chitietthoitiet.php?newsID=1">Thời Tiết</a>
+                    <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Views/Pages/Layouts/chitietthegioi.php?newsID=2">Thế Giới </a>
                     <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Views/Pages/Layouts/chitietkinhte.php?newsID=3">Kinh Tế</a>
                     <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Sức Khỏe</a>
                     <a class="navig" href="http://localhost/CHUYENNOCHUYENKIA/Chuyennochuyenkia/Application/Views/Pages/Layouts/chitietthethao.php?newsID=4">Thể Thao</a>
@@ -48,16 +49,42 @@
         </div>
     </section>
     <!-- phần content -->
-    
-    <?php 
-    require "../../Pages/Home.php";
+
+    <?php
+    // require "../../Pages/Home.php";
     ?>
+    <?php
+    if (isset($_SESSION['Detailchinhtri'])) {
+        // print_r($_SESSION['Detailchinhtri']);
+        $row = $_SESSION['Detailchinhtri'];
+    ?>
+        <div class="thongtinchitietthegioi">
+            <div class="title-thongtinchitietthegioi">
+                <?php echo $row['title']; ?>
+            </div>
+            <div class="img-thongtinchitietthegioi">
+                <img src="<?php echo $row['img']; ?>" alt="">
+            </div>
+            <div class="content-thongtinchitietthegioi">
+                <?php echo $row['content']; ?>
+            </div>
+           
+        </div>
+    <?php
+    }
+    ?>
+    
+
+
+
+
+
     <!-- phan Footer -->
     <section class="pass5">
         <div class="footer">
-            <div class="footer-one"> 
+            <div class="footer-one">
                 <img class="logo" src="../../../../Public/Images/Logo/logo.png" alt="">
-                <p  class="footer-information-img">Hân Hạnh Đồng Hành</p>
+                <p class="footer-information-img">Hân Hạnh Đồng Hành</p>
             </div>
             <div class="">
                 <h1 class="footer-information">Về chúng tôi</h1>
@@ -72,8 +99,8 @@
                 <p class="footer-informations">Uư đãi cao</p>
                 <p class="footer-informations">Hướng dẫn sử dụng</p>
                 <p class="footer-informations">Nhiều tin tức mới lạ</p>
-              
-              
+
+
             </div>
             <div>
                 <h1 class="footer-information">Hỗ trợ mọi người</h1>
@@ -82,14 +109,14 @@
                 <p class="footer-informations">Toàn cầu</p>
                 <p class="footer-informations">Tin tức hót nhất</p>
                 <p class="footer-informations">Tin tức mới nhất trong ngày</p>
-              
+
             </div>
 
-           
+
         </div>
         <p class="footer-information-cuoi">2022-2023 Bản quyền thuộc về Tám 24h
             Cấm sao chép dưới mọi hình thức nếu không có sự chấp thuận bằng văn bản</p>
-       
+
 
     </section>
 </body>

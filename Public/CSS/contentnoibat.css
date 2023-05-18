@@ -9,17 +9,20 @@
     background: rgb(180, 177, 172);
     width: 100%;
 }
-.information-pass4{
-    display: grid;
-    grid-template-columns: 70% 30%;
-}
-.information-pass4-left{
+/* .information-pass4{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
+} */
+/* .information-pass4-left{
+    display: flex;
+  
     
-}
-.information-pass4-left-item{
+} */
+/* .information-pass4-left-item{
     width: 98.4%; 
     height:200px;
 
+} */
+.pass4{
+    display: flex;
 }
