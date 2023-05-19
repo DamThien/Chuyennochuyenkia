@@ -79,34 +79,7 @@ $show_ListPost = $list_post->showPost();
             </div>
         </div>
 
-        <!--             
-            <div class="backgroud">
-                    <div class="backgroud-left">
-                        <img class="backgroud-left" src="https://www.anhdulich.vn/storage/sliders/ha-long-bay-copy.jpg" alt="">
-                        <p class="title-slider">Hạ Long Đang Có Dấu Hiệu Đi Xuống
-                        </p>
-    
-                    </div>
-    
-                    <div class="backgroud-right">
-                        <div class="backgroud-right-item">
-                            <img class="backgroud-right-item" src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2017/8/28/551691/Du-Lich_1-01.jpg" alt="">
-    
-                            <p class="title-slider ">Chùa Vang Giam Giasi Đột Ngột
-    
-                            </p>
-                        </div>
-                        <div class="backgroud-right-item">
-                            <img class="backgroud-right-item" src="http://baoninhbinh.org.vn/DATA/ARTICLES/2021/9/28/day-manh-quang-ba-hinh-anh-du-lich-chuan-bi-tot-cac-dieu-4a7a8.jpg" alt="">
-    
-    
-                            <p class="title-slider ">Ninh Bình Đang Đông Lên Vì Du Lịch Tại Khá Đông
-    
-                            </p>
-                        </div>
-    
-                    </div>
-            </div> -->
+
 </div>
 
 
