@@ -43,7 +43,7 @@
     gap: 10px;
 }
 .backgroud-left{
-    
+    object-fit: cover;
 width: 99.3%; 
 height:300px;
 margin-bottom: 10px;
@@ -63,17 +63,38 @@ margin-bottom: 10px;
     position: absolute;
     top:84%;
     margin-left: 20px;
-    color: rgb(255, 251, 251);
+    color: rgb(0, 0, 0);
     font-size: 20px;
 }
 
 .title-slider-s2{  
-    position: absolute;
-    top:88%;
+      position: absolute;
+    top:84%;
     margin-left: 20px;
-    color: rgb(255, 251, 251);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+
+}
+
+.title-slider-s3{
+   
+    position: absolute;
+    top:84%;
+    margin-left: 20px;
+    color: rgb(0, 0, 0);
     font-size: 20px;
 }
+.title-slider-s4{
+   
+    position: absolute;
+    top:84%;
+    margin-left: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+
+
 .title-slider-halong{  
     position: absolute;
     top:56%;

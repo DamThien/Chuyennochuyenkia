@@ -18,10 +18,7 @@ $show_ListPost = $list_post->showPost();
             <tr>
                 <th>Tiêu đề</th>
                 <th>Ảnh</th>
-                <th>Người đăng</th>
                 <th>Danh mục</th>
-                <th>Lượt xem</th>
-                <th>Trạng Thái</th>
                 <th>Hành động</th>
             </tr>
             <?php
@@ -29,26 +26,19 @@ $show_ListPost = $list_post->showPost();
                 foreach ($show_ListPost as $value) {
                     //cắt bớt tiêu đề
                     $title = (strlen($value['title_Article']) > 30) ?
-                        substr($value['title_Article'], 0, 30) . "..." : $value['title_Article'];
+                        substr($value['title_Article'], 0, 50) . "..." : $value['title_Article'];
 
                     echo '<tr>
                                 <td class="title-column">' . $title . '</td>
                                 <td class="center-column"><img style="width: 200px;padding: 5px;" src="' . ImageLink($value['avatar'])  . '"></td>
-                                <td class="center-column"></td>
                                 <td class="center-column">' . $value['name_category'] . '</td>
-                                <td class="center-column">' . $value['view'] . '</td>
-                                <td class="center-column"></td>
                                 <td class="center-column"><a href="./Application/Views/Admin/EditPost.php?id_Article=' . $value['id_Article'] . '">sửa</a>|<a href="./Application/Views/Admin/DeletePost.php?id_Article=' . $value['id_Article'] . '">Xóa</a></td>
                                 </tr>';
                 }
             } else {
                 echo '<span style="color: red;">Invalid data. Please check your data.</span>';
             }
-
             ?>
-
-
-
         </table>
     </div>
             

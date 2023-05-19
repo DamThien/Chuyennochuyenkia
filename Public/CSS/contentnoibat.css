@@ -10,16 +10,26 @@
     width: 100%;
 }
 .information-pass4{
-    display: grid;
-    grid-template-columns: 70% 30%;
+    /* display: grid; */
+    /* grid-template-columns: 20% 30%; */
 }
 .information-pass4-left{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     
+    
+}
+
+.information-pass4-content{
+    padding: 10px;
 }
 .information-pass4-left-item{
     width: 98.4%; 
     height:200px;
-
+    object-fit: cover;
+}
+.information-pass4-left-item h3 {
+  margin: 10px;
+  font-size: 18px;
+  color: #333333;
 }
