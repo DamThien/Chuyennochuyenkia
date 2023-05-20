@@ -30,6 +30,8 @@ $show_ListPost = $list_post->showPost();
                 foreach ($limitedListPostImg as $post) {
                     $image = ImageLink($post['avatar']);
                     $title = $post['title_Article'];
+
+
                 ?>
 
                     <div class="img-item">
@@ -54,7 +56,7 @@ $show_ListPost = $list_post->showPost();
                     ?>
 
                         <img class="backgroud-left" src="<?= $firstImage ?>" alt="">
-                        <!-- <p class="title-slider"><?= $firstTitle ?></p> -->
+                        <!-- <h2 class="title-slider"><?= $firstTitle ?></h2> -->
                     <?php endif; ?>
                 </div>
 
