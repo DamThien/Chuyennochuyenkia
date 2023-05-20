@@ -15,20 +15,21 @@
     <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Chuyennochuyenkia/Application/Views/Admin/headerAdmin.php';
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Chuyennochuyenkia/Application/Controllers/postClass.php';
+   
     $post = new Post;
 
     if (!isset($_GET['id_Article']) || $_GET['id_Article'] == NULL) {
-        // echo "<script>window.location = 'EditPost.php'</script>";
+        echo "<script>window.location = 'EditPost.php'</script>";
     } else {
         $id_Article = $_GET['id_Article'];
     }
 
     $get_article = $post->get_post($id_Article);
 
+
     if ($get_article) {
         $result = $get_article->fetch_assoc();
     }
-
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $post_name = $_POST['post_name'];
         $post_date = $_POST['post_date'];
