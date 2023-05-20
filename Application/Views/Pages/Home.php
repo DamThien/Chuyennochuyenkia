@@ -75,7 +75,7 @@ $show_ListPost = $list_post->showPost();
                         // $title = $post['title_Article'];
                     ?>
 
-                    <a href="<?= Redirect("Information"); ?>&ID=<?=$id?>">
+                    
                      <div class="backgroud-right-item">
                             <img class="backgroud-right-item" src="<?= $image ?>" alt="">
                             <!-- <p class="title-slider"><?= $title ?></p> -->

@@ -38,7 +38,7 @@ $showCategory = $category->showCategory();
                 </div>
             </div>
             <div>
-                <button class="login"><a href="*">Đăng nhập</a></button>
+                <button class="login"><a href="<?= Redirect("Login")?>">Đăng nhập</a></button>
             </div>
         </div>
     </header>

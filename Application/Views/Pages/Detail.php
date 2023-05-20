@@ -9,7 +9,7 @@
     <div class="container">
     <?php
         // Kết nối cơ sở dữ liệu
-        $conn = mysqli_connect('localhost', 'root', '', 'news_website');
+        $conn = mysqli_connect('localhost:3307', 'root', '', 'news_website');
 
         // Kiểm tra kết nối
         if (!$conn) {

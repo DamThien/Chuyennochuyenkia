@@ -27,7 +27,7 @@
                 </h5>
             <?php }
         }?>
-        <form action="Login/Login" method="POST" class="form" id="form-1">
+        <form action="Admin" method="POST" class="form" id="form-1">
             <h3 class="heading">Đăng nhập</h3>
             <div class="form-group">
                 <label for="email_user" class="form-label">User name</label>
