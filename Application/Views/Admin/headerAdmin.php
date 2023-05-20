@@ -4,6 +4,6 @@
     <ul class="utilities">
         <br>
         <li class="users"><a href="#">Admin</a></li>
-        <li class="logout warn"><a href="#">Đăng xuất</a></li>
+        <li class="logout warn"><a href="">Đăng xuất</a></li>
     </ul>
 </header>
