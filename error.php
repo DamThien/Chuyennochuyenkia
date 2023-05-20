@@ -19,8 +19,7 @@
                 <h2>Oops!</h2>
                 <p>The page you're trying to reach doesn't exist.</p>
                     <div class="btn-back-home"><button><a href="<?= Redirect("Home") ?>">GO HOME</a></button></div>
-                <h1>4<img src="" alt="">4</h1>
+                <h1>404</h1>
             </div>
-            <div class="errorBottom-right"><img src="" alt=""></div>
         </div>
     </section>

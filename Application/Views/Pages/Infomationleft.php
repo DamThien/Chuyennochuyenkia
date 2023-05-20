@@ -10,7 +10,7 @@
     <?php
         // Kết nối cơ sở dữ liệu
         $conn = mysqli_connect('localhost', 'root', '', 'news_website');
-
+ 
         // Kiểm tra kết nối
         if (!$conn) {
             die("Kết nối cơ sở dữ liệu thất bại: " . mysqli_connect_error());

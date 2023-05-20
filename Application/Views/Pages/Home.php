@@ -61,8 +61,7 @@ $show_ListPost = $list_post->showPost();
 
                     <a href="<?= Redirect("Information"); ?>&ID=<?=$id?>">
                         <img class="backgroud-left" src="<?= $firstImage ?>" alt="">
-                            <!-- <p class="title-slider"><?= $firstTitle ?></p> -->
-                       </a>
+                        <!-- <h2 class="title-slider"><?= $firstTitle ?></h2> -->
                     <?php endif; ?>
                 </div>
 

@@ -11,4 +11,5 @@
     {
         require_once "./Application/Views/Admin/$layout.php";
     }
+    
 }

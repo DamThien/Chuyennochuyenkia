@@ -1,5 +1,7 @@
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 // require_once $_SERVER['DOCUMENT_ROOT'].'D:\xampp\htdocs\Chuyennochuyenkia\Application\Models\database.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . "\Chuyennochuyenkia\Application\Models\database.php";
 
@@ -48,6 +50,14 @@ class category
         header('location: ../../../AdminCategory');
         return $result;
     }
+
+    public function show_CategoryDetail($id_category){
+        $query = "SELECT * FROM view_category WHERE id_category= '$id_category'";
+        $result = $this->db->select($query);
+        return $result;
+        
+    }
+
 }
 
 
