@@ -33,7 +33,14 @@ $showCategory = $category->showCategory();
                 <div class="list">
                     <?php
                     foreach ($showCategory as $item) {
-                        $categoryUrl = "Detail?category=" . urlencode($item['name_category']);
+                        $categoryUrl = "CategoryDetail&category=" . urlencode($item['id_category']);
+                       
+                        // $post = $limitedListPost[$index];
+                        // $image = ImageLink($post['avatar']);
+                        // $titles = $post['title_Article'];
+                        // $id = $post['id_Article'];
+
+
                     ?>
                         <a class="navig" href="<?= $categoryUrl ?>"><?php echo $item['name_category'] ?></a>
                     <?php } ?>

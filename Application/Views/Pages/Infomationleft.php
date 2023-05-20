@@ -24,6 +24,7 @@
             // Truy vấn bảng "articles" để lấy dữ liệu
             $query = "SELECT * FROM articles WHERE id_Article = $id";
             $result = mysqli_query($conn, $query);
+            
 
             // Kiểm tra kết quả truy vấn
           

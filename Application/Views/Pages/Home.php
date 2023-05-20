@@ -30,17 +30,22 @@ $show_ListPost = $list_post->showPost();
                 foreach ($limitedListPostImg as $post) {
                     $image = ImageLink($post['avatar']);
                     $title = $post['title_Article'];
+                    $titles = $post['title_Article'];
+                    $id = $post['id_Article'];
+                   
                 ?>
 
-                    <div class="img-item">
-                        <div class="img-s<?= $count + 1 ?>">
-                            <img src="<?= $image ?>" alt="">
-                            <h1 class="title-slider-s<?= $count + 1 ?>"><?= $title ?></h1>
+                    <a href="<?= Redirect("Information"); ?>&ID=<?=$id?>">
+                        <div class="img-item">
+                            <div class="img-s<?= $count + 1 ?>">
+                                <img src="<?= $image ?>" alt="">
+                                <h1 class="title-slider-s<?= $count + 1 ?>"><?= $title ?></h1>
+                            </div>
                         </div>
-                    </div>
+                    </a>
 
                 <?php
-                    $count++;
+                    
                 }
                 ?>
             </div>
@@ -51,26 +56,32 @@ $show_ListPost = $list_post->showPost();
                         $firstPost = $limitedListPostImg[3];
                         $firstImage = ImageLink($firstPost['avatar']);
                         $firstTitle = $firstPost['title_Article'];
+
                     ?>
 
+                    <a href="<?= Redirect("Information"); ?>&ID=<?=$id?>">
                         <img class="backgroud-left" src="<?= $firstImage ?>" alt="">
-                        <!-- <p class="title-slider"><?= $firstTitle ?></p> -->
+                            <!-- <p class="title-slider"><?= $firstTitle ?></p> -->
+                       </a>
                     <?php endif; ?>
                 </div>
 
                 <div class="backgroud-right">
                     <?php
                     $limitedListPostBg = array_slice($limitedListPost, 5, 2); // Lấy 2 phần tử tiếp theo cho phần backgroud
-
+                    $firstImage = ImageLink($firstPost['avatar']);
+                    $firstTitle = $firstPost['title_Article'];
                     foreach ($limitedListPostBg as $post) {
                         $image = ImageLink($post['avatar']);
                         // $title = $post['title_Article'];
                     ?>
 
-                        <div class="backgroud-right-item">
+                    <a href="<?= Redirect("Information"); ?>&ID=<?=$id?>">
+                     <div class="backgroud-right-item">
                             <img class="backgroud-right-item" src="<?= $image ?>" alt="">
                             <!-- <p class="title-slider"><?= $title ?></p> -->
                         </div>
+                     </a>
 
                     <?php
                     }

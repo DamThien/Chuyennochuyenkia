@@ -1,4 +1,8 @@
+
+
 <?php
+
+
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Controllers\postClass.php';
 
@@ -29,11 +33,18 @@ $limitedListPost = mysqli_fetch_all($show_ListPost, MYSQLI_ASSOC);
                     $post = $limitedListPost[$index];
                     $image = ImageLink($post['avatar']);
                     $titles = $post['title_Article'];
+                    $id = $post['id_Article'];
+                   
+                
+                    
         ?>
-                    <div class="information-pass4-content">
-                        <img class="information-pass4-left-item" src="<?= $image ?>" alt="">
-                        <h3><?= $titles ?></h3>
-                    </div>
+                    <a href="<?= Redirect("Detail"); ?>&ID=<?=$id?>">
+                        <div class="information-pass4-content">
+                            
+                            <img class="information-pass4-left-item" src="<?= $image ?>" alt="">
+                                <h3><?= $titles ?></h3>
+                            </div>
+                    </a>
         <?php
                 }
             }
