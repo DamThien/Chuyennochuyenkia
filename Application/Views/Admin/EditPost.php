@@ -55,7 +55,6 @@
         );
     }
     ?>
-
     <main role="main">
         <div class="admin_content-post">
             <h1>Sửa bài đăng</h1>

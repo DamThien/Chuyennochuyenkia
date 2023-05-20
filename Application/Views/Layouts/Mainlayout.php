@@ -1,3 +1,14 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Controllers\categoryClass.php';
+
+$category = new category;
+
+$showCategory = $category->showCategory();
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="<?= ImageLink("logo.png") ?>">
-    
+
     <title><?= $data['page'] ?></title>
 </head>
 
@@ -18,17 +29,14 @@
                 <a href="<?= Redirect("Home") ?>"><img class="logotame" src="<?= ImageLink("logo.png") ?>" alt=""></a>
             </div>
             <div class="form">
-                <input class="search" type="text" value="Tìm Kiếm">
-
+                <input class="search" type="text" placeholder="Tìm Kiếm">
                 <div class="list">
-                    <a class="navig" href="<?= Redirect("Detail") ?>">Thời Sự</a>
-                    <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Thế Giới </a>
-                    <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Kinh Tế</a>
-                    <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Sức Khỏe</a>
-                    <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Thể Thao</a>
-                    <a class="navig" href="http://chuyennochuyenkia.atwebpages.com"> Giáo Dục</a>
-                    <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Công Nghệ </a>
-                    <a class="navig" href="http://chuyennochuyenkia.atwebpages.com">Giải Trí</a>
+                    <?php
+                    foreach ($showCategory as $item) {
+                        $categoryUrl = "Detail?category=" . urlencode($item['name_category']);
+                    ?>
+                        <a class="navig" href="<?= $categoryUrl ?>"><?php echo $item['name_category'] ?></a>
+                    <?php } ?>
                 </div>
             </div>
             <div>

@@ -37,8 +37,15 @@
 }
 .login {
     margin-top: 30%;
-    width: 70px;
+    width: 60%;
+    height: 20%;
     margin-left: 40px;
+    background-color: rgba(22, 175, 223, 1);
+
+}
+.login a{
+    color: white;
+    text-decoration: none;
 }
 .list {
     background: black;

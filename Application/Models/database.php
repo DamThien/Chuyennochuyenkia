@@ -10,7 +10,7 @@ class Database
     public $user = DB_USER;
     public $pass = DB_PASS;
     public $dbname = DB_NAME;
-    public $dbport = 3306;
+    public $dbport = 3307;
 
     public $link;
     public $error;
@@ -19,7 +19,7 @@ class Database
     {
         $this->connectDB();
     }
-
+    // kết nối database
     private function connectDB()
     {
         $this->link = new mysqli($this->host, $this->user, $this->pass, $this->dbname, $this->dbport);
@@ -49,12 +49,7 @@ class Database
         } else {
             return false;
         }
-        // $insert_row = $this->link->query($query);
-        // if ($insert_row) {
-        //     return true; 
-        // } else {
-        //     throw new Exception($this->link->error); 
-        // }
+     
     }
 
     //update data
