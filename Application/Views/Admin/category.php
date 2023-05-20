@@ -1,18 +1,18 @@
 <?php
-    // require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\headerAdmin.php';
-    // require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\menuAdmin.php';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Controllers\categoryClass.php';
+// require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\headerAdmin.php';
+// require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Views\Admin\menuAdmin.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '\Chuyennochuyenkia\Application\Controllers\categoryClass.php';
 
-    $category = new category;
+$category = new category;
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $category_name = $_POST['category_name'];
-        $insert_category = $category->insert_category($category_name);
-    }
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $category_name = $_POST['category_name'];
+    $insert_category = $category->insert_category($category_name);
+}
 
-    $showCategory = $category->showCategory();
+$showCategory = $category->showCategory();
 
-    ?>
+?>
 <main role="main">
     <div class="admin_content-category">
         <h1>Danh mục</h1>
@@ -38,7 +38,7 @@
                     echo '<tr>
                         <td>' . $Stt . '</td>
                         <td>' . $item['name_category'] . '</td>
-                        <td><a href="./Application/Views/Admin/EditCategory.php?id_category=' . $item['id_category'] . '">Sửa</a>|<a href="./Application/Views/Admin/DeleteCategory.php?id_category=' . $item['id_category'] . '">xóa</a></td>
+                        <td><a href="./Application/Views/Admin/EditCategory.php?id_category=' . $item['id_category'] . '">Sửa</a>|<a href="./Application/Views/Admin/DeleteCategory.php?id_category=' . $item['id_category'] . '" class="delete-link">xóa</a></td>
                         </tr>';
                 }
             } else {
@@ -55,6 +55,27 @@
             }
         }
     </script>
+    <script>
+        // Lấy tất cả các liên kết xóa
+        var deleteLinks = document.getElementsByClassName('delete-link');
+
+        // Duyệt qua từng liên kết xóa và gán sự kiện click
+        for (var i = 0; i < deleteLinks.length; i++) {
+            deleteLinks[i].addEventListener('click', function(event) {
+                // Ngăn chặn hành vi mặc định của liên kết
+                event.preventDefault();
+
+                // Hiển thị thông báo xác nhận xóa
+                var result = confirm(" Ràng buộc bài viết!!!Bạn có chắc chắn muốn xóa không?");
+
+                // Nếu người dùng xác nhận xóa, chuyển hướng đến liên kết xóa
+                if (result) {
+                    window.location.href = this.href;
+                }
+            });
+        }
+    </script>
+
 
 
 </main>
